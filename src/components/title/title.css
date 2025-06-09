@@ -21,7 +21,7 @@ h2 {
 }
 @media (max-width: 859px){
     .header {
-        width: 400px;
+        width: 320px;
         padding: 11px 13px;
     }
     h2 {
