@@ -32,11 +32,11 @@ button {
 }
 @media (max-width: 859px){
     .panel {
-        width: 400px;
+        width: 320px;
         padding: 11px 13px;
     }
     input, button {
-        width: 120px;
+        width: 90px;
         padding: 5px 8px;
         font-size: 14px;
     }
