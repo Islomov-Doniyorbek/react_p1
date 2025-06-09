@@ -1,0 +1,38 @@
+.summa {
+    position: relative;
+    box-shadow: 0 0 10px 1px navy;
+    border-radius: 6px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-around;
+}
+.allRemove {
+    padding: 8px 10px;
+    position: relative;
+    border-radius: 8px;
+    outline: none;
+    border: 1.1px solid rgb(216, 216, 246);
+    /* font-size: 18px; */
+    color: navy;
+    cursor: pointer;
+    background: #ff4242;
+}
+@media (min-width: 860px){
+    .summa {
+        width: 800px;
+        padding: 22px 26px;
+    }
+    .allRemove {
+        font-size: 18px;
+    }
+}
+@media (max-width: 859px){
+    .summa {
+        width: 400px;
+        padding: 11px 13px;
+    }
+    .allRemove {
+        font-size: 14px;
+    }
+}

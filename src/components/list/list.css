@@ -1,0 +1,21 @@
+.area {
+    position: relative;
+    box-shadow: 0 0 10px 1px navy;
+    border-radius: 6px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-direction: column;
+}
+@media (min-width: 860px){
+    .area {
+        width: 800px;
+        padding: 22px 26px;
+    }
+}
+@media (max-width: 859px){
+    .area {
+        width: 400px;
+        padding: 11px 13px;
+    }
+}

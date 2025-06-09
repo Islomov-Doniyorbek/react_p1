@@ -1,0 +1,43 @@
+.panel {
+    position: relative;
+    box-shadow: 0 0 10px 1px navy;
+    border-radius: 6px;
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+input, button {
+    position: relative;
+    border-radius: 8px;
+    outline: none;
+    border: 1.1px solid navy;
+    color: navy;
+    cursor: pointer;
+}
+button {
+    background: #4242ff;
+    color: aqua;
+}
+
+@media (min-width: 860px){
+    .panel {
+        width: 800px;
+        padding: 22px 26px;
+    }
+    input, button {
+        font-size: 18px;
+        padding: 8px 10px;
+    }
+}
+@media (max-width: 859px){
+    .panel {
+        width: 400px;
+        padding: 11px 13px;
+    }
+    input, button {
+        width: 120px;
+        padding: 5px 8px;
+        font-size: 14px;
+    }
+}

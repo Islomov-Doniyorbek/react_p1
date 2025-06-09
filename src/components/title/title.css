@@ -1,0 +1,30 @@
+.header {
+    position: relative;
+    box-shadow: 0 0 10px 1px navy;
+    border-radius: 6px;
+    margin: 10px 0;
+}
+h2 {
+    text-align: center;
+    /* text-shadow: 0 10px 7px navy; */
+    color: navy;
+    font-size: 2.2rem;
+}
+@media (min-width: 860px){
+    .header {
+        width: 800px;
+        padding: 22px 26px;
+    }
+    h2 {
+        font-size: 2.2rem;
+    }
+}
+@media (max-width: 859px){
+    .header {
+        width: 400px;
+        padding: 11px 13px;
+    }
+    h2 {
+        font-size: 1.1rem;
+    }
+}
