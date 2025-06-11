@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import { CgAdd } from "react-icons/cg";
+
 import './inputPanel.css'
 
 const InputPanel = ({addItem}) => {
@@ -38,9 +40,13 @@ const InputPanel = ({addItem}) => {
 
   return (
     <form className='panel' onSubmit={addForm}>
-      <input className='input' name='name' value={item.name} onChange={onChangeVals} type="text" placeholder='Item Name' required />
-      <input className='input' name='cost' value={item.cost} onChange={onChangeVals} type="number" min="0" placeholder='0.00 $' required />
-      <button>Add</button>
+      <div>
+        <input className='input' name='name' value={item.name} onChange={onChangeVals} type="text" placeholder='Item Name' required />
+        <input className='input' name='cost' value={item.cost} onChange={onChangeVals} type="number" min="0" placeholder='0.00 $' required />
+      </div>
+      <button>
+        <CgAdd size={20} />
+      </button>
     </form>
   )
 }

@@ -1,21 +1,108 @@
 .area {
     position: relative;
-    box-shadow: 0 0 10px 1px navy;
+    box-shadow: 0 0 4px 1px navy;
     border-radius: 6px;
-    display: flex;
-    gap: 10px;
+    background: #1B56FD;
+    color: #E9DFC3;
+    width: 100%;
+}
+table {
+    position: relative;
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+}
+table::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 100%;
+    background: linear-gradient(to left, rgba(240, 255, 255, 0.66), rgba(240, 255, 255, 0.145), transparent);
+    /* z-index: 4; */
+    left: 0;
+    top: 0;
+    transform: skew(-30deg) translateX(-80px);
+    animation: tr 7s linear infinite;
+}
+tbody p {
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+}
+tr {
+    width: 100%;
+    position: relative;
+    display: grid;
+    grid-template-columns: 10% 40% 30% 20%;
+    padding: 8px;
+    border-bottom: 1.4px solid #E9DFC3;
     align-items: center;
-    flex-direction: column;
+}
+tr:hover:nth-child(even){
+    background: #fffbf0;
+    color: #1B56FD;
+}
+tr:hover:nth-child(even) button {
+    background: #E9DFC3;
+    color: #1B56FD;
+    border-color: #1B56FD;
+}
+th, td {
+    text-align: left;
+    padding: 10px;
+}
+td:last-child {
+    text-align: right;
+}
+td:last-child button {
+    background: #1B56FD;
+    margin: 3px;
+    padding: 5px;
+    border-radius: 50%;
+    outline: none;
+    border: 1px solid #E9DFC3;
+    color: #E9DFC3;
+    cursor: pointer;
+}
+td:last-child button:hover {
+    background: var(--clr);
+    border-color: #fffbf0;
+    color: #E9DFC3;
+    filter: drop-shadow(0 0 4px var(--clr))
+            drop-shadow(0 0 10px var(--clr));
 }
 @media (min-width: 860px){
     .area {
         width: 800px;
         padding: 22px 26px;
     }
+    tr {
+        font-size: 20px;
+    }
+    @keyframes tr {
+        0% {
+            transform:  skew(-30deg) translateX(-200px);
+        }
+        100% {
+            transform:  skew(-30deg) translateX(840px);
+        }
+    }
 }
 @media (max-width: 859px){
     .area {
-        width: 320px;
+        width: 350px;
         padding: 11px 13px;
     }
+    tr {
+        font-size: 16px;
+    }
+    @keyframes tr {
+        0% {
+            transform:  skew(-30deg) translateX(-200px);
+        }
+        100% {
+            transform:  skew(-30deg) translateX(400px);
+        }
+    }
+    
 }

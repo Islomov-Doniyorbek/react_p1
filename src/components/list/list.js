@@ -1,19 +1,33 @@
 // import React from 'react'
+
 import ListItem from '../listItem/listItem'
 import './list.css'
+// import noDataImg from '../../imgs/Layer 1.png'
 
 const List = ({data, onDelete}) => {
-  // let i=0;
+  let i=1;
   console.log(data);
   
   return (
-    <ul className='area'>
-      {
-      data.length === 0 ? <p>Ma'lumotlar mavjud emas!</p> : data.map(item=>(<ListItem key={item.id} id={item.id} prd={item.name} cost={item.cost} onDelete={()=>onDelete(item.id)}/>))        
-      }
-      
-      {/* <p>Ma'lumotlar mavjud emas!</p> */}
-    </ul>
+   <div className='area'>
+    
+          <table>
+              <thead>
+                <tr>
+                  <th>№</th>
+                  <th>Mahsulot nomi</th>
+                  <th>Narxi</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+        {data.length === 0 ? <p>Ma'lumot topilmadi</p> : data.map(item=>(
+                <ListItem key={item.id} i={i++} prd={item.name} cost={item.cost} onDelete={()=>onDelete(item.id)}/>
+              ))}
+                </tbody>
+          </table>
+     
+   </div>
     
   )
 }

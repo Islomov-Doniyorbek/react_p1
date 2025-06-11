@@ -1,22 +1,32 @@
 .summa {
     position: relative;
-    box-shadow: 0 0 10px 1px navy;
+    box-shadow: 0 0 4px 1px navy;
     border-radius: 6px;
     display: flex;
-    gap: 10px;
+    gap: 9px;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+    background: #1B56FD;
+    color: #E9DFC3;
+    font-weight: 600;
 }
 .allRemove {
     padding: 8px 10px;
     position: relative;
-    border-radius: 8px;
+    border-radius: 50%;
     outline: none;
     border: 1.1px solid rgb(216, 216, 246);
     /* font-size: 18px; */
-    color: navy;
+    color: #E9DFC3;
     cursor: pointer;
-    background: #ff4242;
+    text-align: center;
+    background: transparent;
+}
+.allRemove:hover {
+    background: red;
+    color: #E9DFC3;
+    filter: drop-shadow(0 0 4px red)
+            drop-shadow(0 0 10px red);
 }
 @media (min-width: 860px){
     .summa {
@@ -29,8 +39,10 @@
 }
 @media (max-width: 859px){
     .summa {
-        width: 320px;
+        width: 350px;
         padding: 11px 13px;
+        font-size: 14px;
+        font-weight: 500;
     }
     .allRemove {
         font-size: 14px;

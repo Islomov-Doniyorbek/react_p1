@@ -18,6 +18,11 @@ function App(){
         setData(newArr)
         localStorage.setItem("userData", JSON.stringify(newArr));
     }
+    // const onUpdate = id => {
+    //     const newArr = data.filter(c=> c.id !== id)
+    //     setData(newArr)
+    //     localStorage.setItem("userData", JSON.stringify(newArr));
+    // }
 
     useEffect(()=>{
         const savedData = localStorage.getItem("userData");

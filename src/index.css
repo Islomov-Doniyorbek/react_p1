@@ -2,14 +2,18 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: all 0.9s ease;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  /* overflow: hidden; */
 }
 body {
   position: relative;
   min-height: 100vh;
   width: 100%;
-  padding: 10px;
   display: flex;
-  /* gap: 20px; */
+  background: skyblue;
+  animation: bg 10s linear infinite;
+  padding: 10px 0;
 }
 #root {
   width: 100%;
@@ -17,4 +21,13 @@ body {
   align-items: center;
   gap: 10px;
   flex-direction: column;
+}
+
+@keyframes bg {
+  0%, 100% {
+    background: #0118D8;
+  }
+  50% {
+    background: rgb(5, 95, 155);
+  }
 }

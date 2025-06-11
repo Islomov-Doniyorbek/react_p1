@@ -1,13 +1,18 @@
 // import React from 'react'
+import { FaTrashAlt, FaPencilAlt } from "react-icons/fa";
 import './listItem.css'
-const ListItem = ({id, prd, cost, onDelete}) => {
+const ListItem = ({i, prd, cost, onDelete}) => {
+  // let i=0;
   return (
-    <li>
-        <span>№{id}</span>
-        <span>{prd}</span>
-        <span>{cost} UZS</span>
-        <span onClick={onDelete}>Delete</span>
-    </li>
+    <tr>
+        <td>{i}</td>
+        <td>{prd}</td>
+        <td>{cost} <span>uzs</span></td>
+        <td>
+          {/* <button style={{'--clr': 'orange'}}><FaPencilAlt size={20} /></button>  */}
+          <button style={{'--clr': 'red'}} onClick={onDelete}><FaTrashAlt size={20} /></button>
+        </td>
+    </tr>
     
   )
 }
