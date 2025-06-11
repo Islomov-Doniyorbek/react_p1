@@ -17,7 +17,7 @@ h2::after {
     position: absolute;
     content: '';
     width: 0%;
-    height: 1.7px;
+    height: 1px;
     background: #E9DFC3;
     bottom: 0;
     filter: drop-shadow(0 0 4px #e9dfc3)
